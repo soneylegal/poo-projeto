@@ -98,19 +98,20 @@ function limparCampos() {
   document.getElementById("disciplina").value = "";
   document.getElementById("tipo").value = "teorica";
 }
-function parabens(){
-    let ctn = document.querySelector(".container")
+function parabens() {
+    let ctn = document.querySelector(".container");
     let btn = document.createElement("button");
-    btn.textContent = "Concluir Projeto"
-    btn.addEventListener("click",()=>{
-        let img = document.createElement("img")
-        img.src ="https://lh3.googleusercontent.com/a-/ALV-UjXtqpwdajT7AoA-GYyhxLBnDLHW4zN9PNFHtoVoVV2AwzY_mOw=s2048-c";
-        img.style.maxWidth = "100%"
-        let msg = document.createElement("h3")
-        msg.innerHTML = "PARABENS VOCE CONCLUIU A TAREFA";
-    }
-)
+    btn.textContent = "Concluir Projeto";
+    btn.addEventListener("click", () => {
+        let img = document.createElement("img");
+        img.src = "https://lh3.googleusercontent.com/a-/ALV-UjXtqpwdajT7AoA-GYyhxLBnDLHW4zN9PNFHtoVoVV2AwzY_mOw=s2048-c";
+        img.style.maxWidth = "100%";
+        let msg = document.createElement("h3");
+        msg.innerHTML = "PARABÉNS, VOCÊ CONCLUIU A TAREFA!";
+        ctn.appendChild(img);
+        ctn.appendChild(msg);
+    });
 
-    ctn.appendChild(btn)
+    ctn.appendChild(btn);
 }
-parabens()
+parabens();

@@ -103,13 +103,16 @@ function parabens() {
     let btn = document.createElement("button");
     btn.textContent = "Concluir Projeto";
     btn.addEventListener("click", () => {
+      if(!document.querySelector("img") && !document.querySelector("h3")){
         let img = document.createElement("img");
         img.src = "https://lh3.googleusercontent.com/a-/ALV-UjXtqpwdajT7AoA-GYyhxLBnDLHW4zN9PNFHtoVoVV2AwzY_mOw=s2048-c";
         img.style.maxWidth = "100%";
         let msg = document.createElement("h3");
         msg.innerHTML = "PARABÉNS, VOCÊ CONCLUIU A TAREFA!";
+      
         ctn.appendChild(img);
         ctn.appendChild(msg);
+      }
     });
 
     ctn.appendChild(btn);

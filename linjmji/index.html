@@ -3,32 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="stilo.css" />
     <title>Gerenciador de Tarefas de Estudo</title>
   </head>
   <body>
-  
     <header>
       <h1>Gerenciador de Tarefas de Estudo</h1>
     </header>
-    <div class="container">
-       
-      <h2>Adicionar Nova Tarefa</h2>
-      <input type="text" id="titulo" placeholder="Título da Tarefa" />
-      <input type="text" id="descricao" placeholder="Descrição" />
-      <input type="date" id="prazo" />
-      <input type="text" id="disciplina" placeholder="Disciplina" />
-      <select id="tipo">
-        <option value="teorica">Teórica</option>
-        <option value="pratica">Prática</option>
-        <option value="revisao">Revisão</option>
-      </select>
-      <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+    <section>
+      <div class="container">
+        <h2 id="pop">Adicionar Nova Tarefa</h2>
+        <div class="cpentrada">
+          <input
+            class="ent"
+            type="text"
+            id="titulo"
+            placeholder="Título da Tarefa"
+          />
+        </div>
+        <div class="cpentrada">
+          <input
+            class="ent"
+            type="text"
+            id="descricao"
+            placeholder="Descrição"
+          />
+        </div>
 
-      <h2>Lista de Tarefas</h2>
-      <div id="listaTarefas" class="task-list"></div>
-      
-    </div>
+        <input type="date" id="prazo" />
+        <div class="cpentrada">
+          <input
+            class="ent"
+            type="text"
+            id="disciplina"
+            placeholder="Disciplina"
+          />
+        </div>
+        <select id="tipo" onchange="atualizarPlaceholder()">
+          <option value="teorica">Teórica</option>
+          <option value="pratica">Prática</option>
+          <option value="revisao">Revisão</option>
+        </select>
+        <div class="cpentrada">
+          <input type="number" id="num" placeholder="Número de Páginas" />
+        </div>
+        <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+
+        <h2>Lista de Tarefas</h2>
+        <div id="listaTarefas" class="task-list"></div>
+      </div>
+    </section>
+    <p id="grupo">&copy; Daniel Alves, Davi Laurindo , João Vitor</p>
 
     <script src="poo.js"></script>
   </body>

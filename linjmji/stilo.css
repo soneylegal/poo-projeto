@@ -1,11 +1,9 @@
-/* Estilo Básico */
 body {
   font-family: Arial, sans-serif;
   background-color: #000000;
   margin: 0;
   padding: 0;
 }
-
 header {
   background-color: #5e00da;
   color: white;
@@ -30,16 +28,20 @@ button {
   width: 100%;
   box-sizing: border-box;
 }
-
 button {
-  background-color: #4caf50;
+  background-color: #000000;
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease; 
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #000000; 
+  opacity: 0.8;
+  color: #ffffff;
+  transform: scale(0.9); 
+  border-radius: 15px;
 }
 
 .task-list {
@@ -52,4 +54,46 @@ button:hover {
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: #f9f9f9;
+}
+
+#grupo {
+  font-style: italic;
+  color: #f9f9f9;
+  font-size: 20px;
+  text-align: center;
+}
+.cpentrada{
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}.cpentrada label{
+  position: absolute;
+  color: #111010;
+  top: 50%;
+  left: 0;
+  font-size: 16px;
+  pointer-events: none;
+}.cpentrada input{
+ background: transparent;
+ width: 100%;
+ height: 40px;
+ color: #000000;
+ border: none;
+ outline: none;
+ font-size: 16px;
+}
+.cpentrada :hover{
+  transition: 0.15s ease;
+  transform: scale(1.05);
+}#prazo{
+  font-size: 16px;
+}#num{
+  color: black;
+}#pop{
+  text-align: center;
+  background: rgb(35, 19, 73);
+  color: rgb(223, 222, 222);
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.445);
+  
 }

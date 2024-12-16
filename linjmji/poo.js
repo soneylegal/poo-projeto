@@ -76,7 +76,6 @@ function adicionarTarefa() {
   const tipo = document.getElementById("tipo").value;
   const num = document.getElementById("num").value;
 
-
   if (!titulo || !descricao || !prazo || !disciplina || !num) {
     alert("Por favor, preencha todos os campos!");
     return;
@@ -84,7 +83,6 @@ function adicionarTarefa() {
 
   let novaTarefa;
 
- 
   if (tipo === "teorica") {
     novaTarefa = new TarefaTeorica(titulo, descricao, prazo, disciplina, num);
   } else if (tipo === "pratica") {
@@ -93,14 +91,14 @@ function adicionarTarefa() {
     novaTarefa = new TarefaRevisao(titulo, descricao, prazo, disciplina, num);
   }
 
-  listaTarefas.push(novaTarefa); 
+  listaTarefas.push(novaTarefa);
   exibirTarefas();
   limparCampos();
 }
 
 function exibirTarefas() {
   const listaTarefasDiv = document.getElementById("listaTarefas");
-  listaTarefasDiv.innerHTML = ""; 
+  listaTarefasDiv.innerHTML = "";
 
   listaTarefas.forEach((tarefa, indice) => {
     const tarefaItem = document.createElement("div");
@@ -131,7 +129,7 @@ function limparCampos() {
   document.getElementById("disciplina").value = "";
   document.getElementById("tipo").value = "teorica";
   document.querySelector("#num").value = undefined;
-  atualizarPlaceholder()
+  atualizarPlaceholder();
 }
 
 function parabens() {
@@ -142,7 +140,7 @@ function parabens() {
     if (!ctn.querySelector("img") && !ctn.querySelector("h3")) {
       let img = document.createElement("img");
       img.src =
-        "https://lh3.googleusercontent.com/a-/ALV-UjXtqpwdajT7AoA-GYyhxLBnDLHW4zN9PNFHtoVoVV2AwzY_mOw=s2048-c";
+        "https://pbs.twimg.com/media/GGwWP__aQAAbHFC.jpg:large";
       img.style.maxWidth = "100%";
       let msg = document.createElement("h3");
       msg.innerHTML = "PARABÉNS, VOCÊ CONCLUIU O PROJETO!";

@@ -145,7 +145,7 @@ function parabens() {
         "https://lh3.googleusercontent.com/a-/ALV-UjXtqpwdajT7AoA-GYyhxLBnDLHW4zN9PNFHtoVoVV2AwzY_mOw=s2048-c";
       img.style.maxWidth = "100%";
       let msg = document.createElement("h3");
-      msg.innerHTML = "PARABENS VOCE CONCLUIU O PROJETO!";
+      msg.innerHTML = "PARABÉNS, VOCÊ CONCLUIU O PROJETO!";
       ctn.appendChild(msg);
       ctn.appendChild(img);
     }

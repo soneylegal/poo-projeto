@@ -28,13 +28,8 @@ class TarefaTeorica extends Tarefa {
     this.numPaginas = numPaginas;
   }
   detalhes() {
-    return `
-        <strong>${this.titulo}</strong> (${this.status})<br>
-        Descrição: ${this.descricao}<br>
-        Prazo: ${this.prazo}<br>
-        Disciplina: ${this.disciplina}<br>
-        Tipo: ${this.tipo}.<br>
-        Numero de Paginas: ${this.numPaginas}`;
+    return `${super.detalhes()}<br>
+    Numero de Paginas: ${this.numPaginas}`;
   }
 }
 
@@ -44,12 +39,7 @@ class TarefaPratica extends Tarefa {
     this.numExercicios = numExercicios;
   }
   detalhes() {
-    return `
-        <strong>${this.titulo}</strong> (${this.status})<br>
-        Descrição: ${this.descricao}<br>
-        Prazo: ${this.prazo}<br>
-        Disciplina: ${this.disciplina}<br>
-        Tipo: ${this.tipo}.<br>
+    return `${super.detalhes()}<br>
         Numero de Exericios: ${this.numExercicios}`;
   }
 }
@@ -60,12 +50,7 @@ class TarefaRevisao extends Tarefa {
     this.numRevisoes = numRevisoes;
   }
   detalhes() {
-    return `
-        <strong>${this.titulo}</strong> (${this.status})<br>
-        Descrição: ${this.descricao}<br>
-        Prazo: ${this.prazo}<br>
-        Disciplina: ${this.disciplina}<br>
-        Tipo: ${this.tipo}.<br>
+    return `${super.detalhes()}<br>
         Numero Revisoes: ${this.numRevisoes}`;
   }
 }
